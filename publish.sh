@@ -1,5 +1,5 @@
 # /user/env/bin bash
-# AWS_CLI_VERSION=$1
+AWS_CLI_VERSION=$1
 # pip install -r requirements.txt
 
 # rm -rf ./aws-cli
