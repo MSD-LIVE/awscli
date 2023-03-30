@@ -21,5 +21,5 @@ cp dist/awscli-${AWS_CLI_VERSION}* ../dist/
 
 cd ..
 git add .
-git commit -m "adds tar ball for AWS CLI version ${AWS_CLI_VERSION}"
+git commit -m "adds build for AWS CLI version ${AWS_CLI_VERSION}"
 git push
