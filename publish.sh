@@ -1,13 +1,16 @@
 # /user/env/bin bash
-source ./.env
-pip install -r requirements.txt
+# AWS_CLI_VERSION=$1
+# pip install -r requirements.txt
 
-rm -rf ./aws-cli
-git clone --depth 1 --branch $AWS_CLI_VERSION https://github.com/aws/aws-cli.git
+# rm -rf ./aws-cli
+# git clone --depth 1 --branch $AWS_CLI_VERSION https://github.com/aws/aws-cli.git
 
-python update-package-name.py
-cp .pypirc aws-cli/.pypirc
+# cd aws-cli
+# pip install -r requirements.txt
+# flit build
 
-cd aws-cli
-pip install -r requirements.txt
-flit publish
+cp dist/awscli-${AWS_CLI_VERSION}.tar.gz ../
+
+cd ..
+git add .
+git commit -m "adds tar ball for AWS CLI version ${AWS_CLI_VERSION}"
